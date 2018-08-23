@@ -1,3 +1,4 @@
 import notifications from './notifications'
+import InfiniteScroll from './InfiniteScroll'
 
-export default notifications
+export { notifications, InfiniteScroll }
