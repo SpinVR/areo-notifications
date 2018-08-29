@@ -1,4 +1,8 @@
-import notifications from './notifications'
+import Notifications from './Notifications'
 import InfiniteScroll from './InfiniteScroll'
+import MomentHelper from './MomentHelper'
+import NotificationMessage from './NotificationMessage'
 
-export { notifications, InfiniteScroll }
+import '../sass/main.scss'
+
+export { Notifications, InfiniteScroll, MomentHelper, NotificationMessage }

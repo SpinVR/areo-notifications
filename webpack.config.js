@@ -1,7 +1,7 @@
 
 var path = require('path')
 module.exports = {
-  entry: './build/index.js',
+  entry: ['./src/index.js', './sass/main.scss'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
@@ -14,11 +14,17 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|bower_components|build)/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
+          loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.(scss|css)$/,
+        include: path.resolve(__dirname, 'sass'),
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
