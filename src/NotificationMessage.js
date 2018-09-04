@@ -42,6 +42,7 @@ export default class NotificationMessage extends React.Component {
   }
 
   commentCounter (count) {
+    console.log(count)
     let message = 'commented on your scene.'
     if (count === 1) return `${message} You have ${count - 1} other comment on your scene`
     else if (count === 2) return
