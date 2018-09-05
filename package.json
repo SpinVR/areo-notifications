@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register test/ --recursive",
-    "build-scss": "babel sass --outdir build/sass --ignore test,node_modules sass && npm run build",
-    "build": "babel src --out-dir build --ignore test,node_modules src"
+    "build-css": "node-sass --include-path scss sass/main.scss build/css/main.css",
+    "build": "babel src --out-dir build --ignore test,node_modules src && npm run build-css"
   },
   "author": "BrioVR",
   "license": "ISC",
@@ -31,6 +31,7 @@
     "chai": "^3.5.0",
     "enzyme": "^2.9.1",
     "mocha": "^3.5.3",
+    "node-sass": "^4.9.3",
     "npm-link": "0.0.4",
     "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.0",
